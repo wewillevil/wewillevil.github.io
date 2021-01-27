@@ -36,7 +36,6 @@ export default {
 
 <style scoped>
 .contacts-list-wrap {
-  max-width: 40%;
-  margin: auto;
+
 }
 </style>

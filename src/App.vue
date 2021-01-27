@@ -86,5 +86,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 60%;
+  min-width: 300px;
 }
 </style>
