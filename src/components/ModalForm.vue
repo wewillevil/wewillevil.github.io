@@ -17,11 +17,10 @@
               <el-option v-for="item in list" :key="item.id" :label="item.name" :value="item.id"/>
             </el-select>
           </el-form-item>
-
-          <el-form-item>
+          <div class="buttons">
             <el-button @click="onClose">Close</el-button>
             <el-button type="primary" @click="onSubmit">Save</el-button>
-          </el-form-item>
+          </div>
         </el-form>
       </el-dialog>
     </el-card>
@@ -79,12 +78,14 @@ export default {
 
 <style scoped>
 .modal-wrap {
-  max-width: 40%;
-  margin: auto;
   border: none;
 }
 .dialog {
-  margin: auto;
-  max-width: 50%;
+  min-width: 300px;
+}
+.buttons {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
 }
 </style>
