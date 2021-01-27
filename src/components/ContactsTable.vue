@@ -33,10 +33,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.contacts-list-wrap {
-  max-width: 40%;
-  margin: auto;
-}
-</style>
