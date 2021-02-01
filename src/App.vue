@@ -55,17 +55,19 @@ export default {
   },
   methods: {
     onFormSubmit (data) {
-      const newObj = {
+      let newId = Math.floor(Math.random() * 100) + data.leader
+      let newObj = {}
+      newObj = {
         ...data,
-        id: Math.random()
+        id: newId
       }
       if (!data.leader) {
         this.list.push(newObj)
         this.saveList()
       } else {
         for (let i = 0; i < this.list.length; i++) {
-          if (this.list[i].id === data.leader) {
-            this.list[i].children.push(newObj)
+          if (this.list[i].id === newObj.leader) {
+            this.list[i].children = [newObj]
             this.saveList()
           }
         }
@@ -91,5 +93,10 @@ export default {
   justify-content: space-between;
   max-width: 60%;
   min-width: 300px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 </style>
