@@ -3,13 +3,13 @@
       <el-button type="primary" @click="dialogVisible = true">New contact</el-button>
 
       <el-dialog class="dialog" :visible.sync="dialogVisible" @close="onClose">
-        <el-form :model="form" :data="list" :rules="rules" ref="addItemForm" label-position="left" label-width="120px">
+        <el-form :model="form" :data="list" :rules="rules" ref="addItemForm" :label-position="labelPosition" label-width="120px">
           <el-form-item label="Name" prop="name">
             <el-input v-model="form.name" autocomplete="off"/>
           </el-form-item>
 
           <el-form-item label="Phone number" prop="number">
-            <el-input v-model="form.number" autocomplete="off"/>
+            <el-input type="number" v-model="form.number" autocomplete="off"/>
           </el-form-item>
 
           <el-form-item label="Team leader" prop="leader">
@@ -38,11 +38,12 @@ export default {
   data () {
     return {
       dialogVisible: false,
+      labelPosition: 'top',
       form: {
+        id: '',
         leader: '',
         name: '',
         number: '',
-        id: '',
         children: []
       },
       rules: {
@@ -87,5 +88,11 @@ export default {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+}
+
+@media (max-width: 750px) {
+  .dialog {
+    min-width: 90%;
+  }
 }
 </style>
