@@ -1,5 +1,5 @@
 <template>
-  <div class="contacts-list-wrap">
+  <div>
     <el-card :header="header" shadow="never">
       <template v-if="!isEmpty">
         <el-table :data="list" row-key="id" :tree-props="{children: 'children', hasChildren: 'hasChildren'}" border>

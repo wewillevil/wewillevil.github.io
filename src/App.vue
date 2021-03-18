@@ -94,6 +94,7 @@ export default {
   max-width: 60%;
   min-width: 300px;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

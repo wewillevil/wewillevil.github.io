@@ -89,6 +89,7 @@ export default {
   flex-flow: row;
   justify-content: space-between;
 }
+
 @media (max-width: 750px) {
   .dialog {
     min-width: 90%;
